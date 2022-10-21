@@ -1,0 +1,66 @@
+html,
+body {
+    background-color: white;
+    color: #636b6f;
+    font-family: "Nunito", sans-serif;
+    font-weight: 200;
+    height: 100vh;
+    margin: 0;
+}
+
+header {
+    background-color: navy;
+    margin-bottom: 50px;
+}
+
+.logo {
+    height: 300px;
+    width: 300px;
+    display: block;
+    margin: auto;
+}
+
+.login-btn {
+    justify-content: center;
+    align-items: center;
+}
+
+.form-control {
+    width: 500px;
+}
+
+.div-informasi {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.label-login {
+    width: 100px;
+}
+
+.toRegister {
+    padding-top: 20px;
+    display: block;
+    width: 400px;
+    margin: auto;
+}
+
+.login-btn {
+    display: block;
+    width: 100px;
+    margin: auto;
+    margin-bottom: 35px;
+}
+
+.box {
+    padding-top: 35px;
+    margin-top: 75px;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: thin;
+    margin-left: 25px;
+    display: block;
+    margin: auto;
+}
