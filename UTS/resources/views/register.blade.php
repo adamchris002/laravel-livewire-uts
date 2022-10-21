@@ -39,9 +39,15 @@
             <label class="label-login">Username: </label>
             <input class="form-control" placeholder="Please input the Username" type="string" />
         </div>
-        <div class="text-center div-informasi">
+        <div class="text-center div-informasi mb-3">
             <label class="label-login">Password: </label>
             <input class="form-control" placeholder="Please input the Password" type="password" />
+        </div>
+        <div class="form-check d-flex justify-content-center mb-2">
+                  <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3cg" />
+                  <label class="form-check-label" for="form2Example3g">
+                    I agree all statements in <a href="toa" class="text-body"><u>Terms of service</u></a>
+                  </label>
         </div>
         <a href="/" class="toRegister">Already have an account? click here to Login!</a>
         <br />
