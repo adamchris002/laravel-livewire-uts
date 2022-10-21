@@ -22,22 +22,30 @@
 
 <body class="antialiased">
     <header>
-        <h1 class="text-center">Login Page</h1>
+        <h1 class="text-center">Register Page</h1>
     </header>
     <div class="container box">
-        <h1 class="text-center">Login Form</h1>
+        <h1 class="text-center">Register Form</h1>
         <img class="logo" src="https://i.ibb.co/9gW1RPX/pngwing-com-removebg-preview.png" />
         <div class="text-center div-informasi">
+            <label class="label-login">Name: </label>
+            <input class="form-control" placeholder="Please input the Name" type="string" />
+        </div>
+        <div class="text-center div-informasi">
+            <label class="label-login">E-mail: </label>
+            <input class="form-control" placeholder="Please input the E-mail Adress" type="string" />
+        </div>
+        <div class="text-center div-informasi">
             <label class="label-login">Username: </label>
-            <input class="form-control" placeholder="Please input your Username" type="string" />
+            <input class="form-control" placeholder="Please input the Username" type="string" />
         </div>
         <div class="text-center div-informasi">
             <label class="label-login">Password: </label>
-            <input class="form-control" placeholder="Please input your Password" type="password" />
+            <input class="form-control" placeholder="Please input the Password" type="password" />
         </div>
-        <a href="register" class="toRegister">Don't have an account? click here to register an account!</a>
+        <a href="/" class="toRegister">Already have an account? click here to Login!</a>
         <br />
-        <a href="" class="btn btn-primary login-btn">login</a>
+        <a href="" class="btn btn-primary login-btn">Register</a>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous">
