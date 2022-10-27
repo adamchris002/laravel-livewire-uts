@@ -16,7 +16,8 @@
     </style>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
     <link href="/css/main.css" rel="stylesheet">
 </head>
 
@@ -44,12 +45,25 @@
     <div class="">
         <div class="row">
             <div class="">
+                <a href="{{route('getAllData')}}" class="fa fa-arrow-left back-home"></a>
                 <img src={{ $detailLaptops['thumbnail'] }} class="detail-picture" alt="...">
-                <hr class="garis"/>
+                <hr class="garis" />
                 <div class="container">
-                    <h4>Product Details</h4>
-                <h5 class="card-title">{{ $detailLaptops['title'] }}</h5>
-                <p class="card-text">{{ $detailLaptops['description'] }}</p>
+                    <h2 class="card-text">$. {{ $detailLaptops['price'] }}</h2>
+                    <h4 class="card-title title-laptop">{{ $detailLaptops['title'] }}</h4>
+                    <div class="rating-stock">
+                        <div class="bintang">
+                            <p class="fa fa-star checked"></p>
+                            <p>{{ $detailLaptops['rating'] }}</p>
+                        </div>
+                        <p class="info-stock">Stock: {{ $detailLaptops['stock'] }}</p>
+                    </div>
+                    <hr/>
+                    <h5>Product Details</h5>
+                    <p class="card-text">{{ $detailLaptops['description'] }}</p>
+                </div>
+                <div class="add-cart">
+                    <a href="" class="btn btn-primary">Add to Cart</a>
                 </div>
             </div>
         </div>

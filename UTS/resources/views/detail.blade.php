@@ -16,7 +16,8 @@
     </style>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
     <link href="/css/main.css" rel="stylesheet">
 </head>
 
@@ -41,16 +42,28 @@
         </div>
     </nav>
 
-    <div class="container">
+    <div class="">
         <div class="row">
-            <h4>Data Smartphones</h4>
             <div class="">
-                <img src={{ $detailSmartphone['thumbnail'] }} class="img-thumbnail" width="150px" max-height="425px"
-                    alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">{{ $detailSmartphone['title'] }}</h5>
+                <a href="{{route('getAllData')}}" class="fa fa-arrow-left back-home"></a>
+                <img src={{ $detailSmartphone['thumbnail'] }} class="detail-picture" alt="...">
+                <hr class="garis" />
+                <div class="container">
+                    <h2 class="card-text">$. {{ $detailSmartphone['price'] }}</h2>
+                    <h4 class="card-title title-laptop">{{ $detailSmartphone['title'] }}</h4>
+                    <div class="rating-stock">
+                        <div class="bintang">
+                            <p class="fa fa-star checked"></p>
+                            <p>{{ $detailSmartphone['rating'] }}</p>
+                        </div>
+                        <p class="info-stock">Stock: {{ $detailSmartphone['stock'] }}</p>
+                    </div>
+                    <hr/>
+                    <h5>Product Details</h5>
                     <p class="card-text">{{ $detailSmartphone['description'] }}</p>
-
+                </div>
+                <div class="add-cart">
+                    <a href="" class="btn btn-primary">Add to Cart</a>
                 </div>
             </div>
         </div>

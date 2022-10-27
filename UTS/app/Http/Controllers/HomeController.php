@@ -20,17 +20,17 @@ class HomeController extends Controller {
             $search = array();
             foreach ($smartphones->products as $hp) {
                 if ($hp->title == $request->search) {
-                    $search = ['id' => $hp->id, 'title'=> $hp->title, 'thumbnail' => $hp->thumbnail, 'description' => $hp->description];
+                    $search = ['id' => $hp->id, 'title'=> $hp->title, 'thumbnail' => $hp->thumbnail, 'description' => $hp->description, 'price' => $hp->price, 'rating' => $hp->rating, 'stock' => $hp->stock];
                 }
             }
             foreach ($laptops->products as $lp) {
                 if ($lp->title == $request->search) {
-                    $search = ['id' => $lp->id, 'title'=> $lp->title, 'thumbnail' => $lp->thumbnail, 'description' => $lp->description];
+                    $search = ['id' => $lp->id, 'title'=> $lp->title, 'thumbnail' => $lp->thumbnail, 'description' => $lp->description, 'price' => $lp->price, 'rating' => $lp->rating, 'stock' => $lp->stock];
                 }
             }
             return view('search',compact('search'));
         }
-
+        // dd($smartphones);
         return view('home',compact('laptops','smartphones'));
     }
 
@@ -41,7 +41,7 @@ class HomeController extends Controller {
         $detailSmartphone = array();
         foreach ($smartphones->products as $hp) {
             if ($hp->id == $id) {
-                $detailSmartphone = ['id' => $hp->id, 'title'=> $hp->title, 'thumbnail' => $hp->thumbnail, 'description' => $hp->description];
+                $detailSmartphone = ['id' => $hp->id, 'title'=> $hp->title, 'thumbnail' => $hp->thumbnail, 'description' => $hp->description, 'price' => $hp->price, 'rating' => $hp->rating, 'stock' => $hp->stock];
             }
         }
         // dd($detailSmartphone);
@@ -54,7 +54,7 @@ class HomeController extends Controller {
         $detailLaptops = array();
         foreach ($laptops->products as $lt) {
             if ($lt->id == $id) {
-                $detailLaptops = ['id' => $lt->id, 'title'=> $lt->title, 'thumbnail' => $lt->thumbnail, 'description' => $lt->description];
+                $detailLaptops = ['id' => $lt->id, 'title'=> $lt->title, 'thumbnail' => $lt->thumbnail, 'description' => $lt->description, 'price' => $lt->price, 'stock' => $lt->stock, 'rating' => $lt->rating];
             }
         }
         // dd($detailSmartphone);

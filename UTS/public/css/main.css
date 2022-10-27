@@ -116,12 +116,6 @@ header {
     margin-top: 25px;
 }
 
-.add-cart {
-    position: absolute;
-    bottom: 0;
-    margin-bottom: 15px;
-}
-
 .judul-laptops {
     margin-top: 20px;
 }
@@ -137,4 +131,76 @@ header {
     margin-left: 25px;
     border-width: 3px;
     border-color: black;
+}
+
+.button-price {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 15px;
+    width: 250px;
+    align-items: center;
+}
+
+.ini-text {
+    align-items: center;
+    justify-content: center;
+    right: 0;
+    position: absolute;
+}
+
+.rating {
+    height: 120px;
+    bottom: 0;
+    position: absolute;
+    margin-left: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rating-text {
+    margin-left: 5px;
+}
+
+.stock {
+    height: 85px;
+    bottom: 0;
+    position: absolute;
+    margin-left: 5px;
+}
+
+.rating-stock {
+    display: flex;
+}
+
+.info-stock {
+    margin-left: 10px;
+}
+
+.bintang {
+    display: flex;
+    align-items: center;
+}
+
+.title-laptop {
+    margin-bottom: 10px;
+}
+
+.add-cart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+}
+
+.back-home {
+    font-size: 35px;
+    text-decoration: none;
+    color: black;
+    left: 0;
+    position: absolute;
+    margin-top: 15px;
+    margin-left: 15px;
 }
