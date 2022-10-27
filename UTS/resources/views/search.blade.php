@@ -33,6 +33,7 @@
             </ul>
             <form class="d-flex" role="search">
               <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-success me-2" type="submit">Search</button>
               <button class="btn btn-danger" type="submit">Logout</button>
             </form>
           </div>
@@ -41,18 +42,34 @@
 
       <div class="container">
         <div class="row">
-            <h4>Data Smartphones</h4>
+            <h4 style="margin-top: 15px">Search Result: </h4>
             <div class="col-lg-4 ">
-                <div class="card mr-2 mb-2" style="width: 18rem;">
-                    <img src={{$search['thumbnail']}} class="img-thumbnail" width="150px" max-height="425px" alt="...">
+                <div class="card mr-2 mb-2 ini-card" style="width: 18rem;">
+                    <a href="{{ route('detail', $search['id']) }}">
+                        <img src={{ $search['thumbnail'] }} class="img-thumbnail" width="150px" max-height="425px"
+                            alt="...">
+                    </a>
                     <div class="card-body">
-                    <h5 class="card-title">{{$search['title']}}</h5>
-                    <p class="card-text">{{$search['description']}}</p>
+
+                        <h5 class="card-title">{{ $search['title'] }}</h5>
+                        <p class="card-text">{{ $search['description'] }}</p>
+                        <p class="card-text stock">Stock: {{$search['stock']}}</p>
+                        <span class="rating">
+                            <p class="fa fa-star checked"></p>
+                            <p class="rating-text">{{ $search['rating'] }}</p>
+                        </span>
+                        <div class="button-price">
+                            <a href="#" class="btn btn-primary">Add to Cart</a>
+                            <p class="card-text ini-text"> $. {{ $search['price'] }}</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
       </div>
+
+
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous">
