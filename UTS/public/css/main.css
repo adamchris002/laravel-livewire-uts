@@ -85,3 +85,56 @@ header {
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     background: linear-gradient(to right, rgba(132, 250, 176, 1), rgba(143, 211, 244, 1))
     }
+
+.test {
+    display: flex;
+    justify-content: left;
+}
+
+.ini-div {
+    display: flex;
+    justify-content: right;
+}
+
+.logout {
+    margin-left: 10px;
+}
+
+.img-thumbnail
+{
+    height: 200px;
+    width: 100%;
+    object-fit: stretch;
+}
+
+.judul-smartphones {
+   margin-top: 15px;
+}
+
+.ini-card {
+    height: 500px;
+    margin-top: 25px;
+}
+
+.add-cart {
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 15px;
+}
+
+.judul-laptops {
+    margin-top: 20px;
+}
+
+.detail-picture {
+    height: 500px;
+    width: 100%;
+    object-fit: stretch;
+}
+
+.garis {
+    margin-right: 25px;
+    margin-left: 25px;
+    border-width: 3px;
+    border-color: black;
+}
