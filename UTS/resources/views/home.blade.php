@@ -52,7 +52,7 @@
             @foreach ($smartphones->products as $hp)
                 <div class="col-lg-4 ">
                     <div class="card mr-2 mb-2 ini-card" style="width: 18rem;">
-                        <a href="{{ route('detail', $hp->id) }}">
+                        <a href="{{ route('show', $hp->id) }}">
                             <img src={{ $hp->thumbnail }} class="img-thumbnail" width="150px" max-height="425px"
                                 alt="...">
                         </a>

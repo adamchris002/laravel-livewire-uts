@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Livewire\DetailPage;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,13 +26,22 @@ Route::get('/register', function () {
     return view('page.register');
 })->name('register');
 
+Route::get('/home', function () {
+    return view('page.home');
+})->name('getAllData');
+
+
+
+
+
+//Route::get('detail', [\App\Http\Livewire\DetailPage::class, 'data'])->name('detail');
+
 // Route::get('/home', function () {
 //     return view('home');
 // });
 
-Route::get("home", [HomeController::class, 'list'])->name("getAllData");
+//Route::get("home", [HomeController::class, 'list'])->name("getAllData");
 Route::get("detail/{id}", [HomeController::class, 'detail'])->name("detail");
 Route::get("detailLaptop/{id}", [HomeController::class, 'detailLaptop'])->name("detailLaptop");
-
 
 
