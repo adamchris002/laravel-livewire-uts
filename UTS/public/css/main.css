@@ -63,6 +63,9 @@ header {
     margin-left: 25px;
     display: block;
     margin: auto;
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .gradient-custom-3 {
@@ -123,7 +126,7 @@ header {
 .detail-picture {
     height: 500px;
     width: 100%;
-    object-fit: stretch;
+    object-fit: unset;
 }
 
 .garis {
@@ -173,6 +176,7 @@ header {
 
 .rating-stock {
     display: flex;
+    align-items: center;
 }
 
 .info-stock {
@@ -182,6 +186,7 @@ header {
 .bintang {
     display: flex;
     align-items: center;
+    height: 30px;
 }
 
 .title-laptop {
@@ -196,11 +201,31 @@ header {
 }
 
 .back-home {
-    font-size: 35px;
     text-decoration: none;
     color: black;
     left: 0;
     position: absolute;
     margin-top: 15px;
     margin-left: 15px;
+}
+
+.first {
+    margin-top: 50px;
+    display: flex;
+}
+
+.ini-alert {
+ margin-top: 25px;
+ height: 60px;
+}
+
+.alert-message {
+    align-self: center;
+    justify-content: center;
+    text-align: left;
+    font-weight: bold;
+}
+
+.rating-detail {
+    margin-left: 3px;
 }

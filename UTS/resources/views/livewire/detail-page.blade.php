@@ -35,7 +35,7 @@
         <div class="">
             <div class="row">
                 <div class="">
-                    <a href="{{route('getAllData')}}" class="fa fa-arrow-left back-home"></a>
+                    <a href="{{route('getAllData')}}"><i class="fa fa-arrow-left fa-lg back-home"></i></a>
                     <img src={{ $thumbnail }} class="detail-picture" alt="...">
                     <hr class="garis" />
                     <div class="container">
@@ -44,7 +44,7 @@
                         <div class="rating-stock">
                             <div class="bintang">
                                 <p class="fa fa-star checked"></p>
-                                <p>{{ $rating }}</p>
+                                <p class="rating-detail">{{ $rating }}</p>
                             </div>
                             <p class="info-stock">Stock: {{ $stock }}</p>
                         </div>

@@ -15,7 +15,6 @@
                     @csrf
                     <input wire:model="search" class="form-control me-2" type="search" name="search" placeholder="Search"
                            aria-label="Search">
-                    <button class="btn btn-success me-2" type="submit">Search</button>
                     <button class="btn btn-danger" type="button">Logout</button>
                 </form>
             </div>
