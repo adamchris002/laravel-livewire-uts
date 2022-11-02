@@ -229,3 +229,14 @@ header {
 .rating-detail {
     margin-left: 3px;
 }
+
+.history-element {
+    border-width: 0px;
+    width: 70px;
+    background-color: white;
+}
+
+.navigasi {
+    padding-left: 10px;
+    padding-right: 10px;
+}

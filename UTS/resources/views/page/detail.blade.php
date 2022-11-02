@@ -10,6 +10,6 @@
 
 @section('content')
     <body class="antialiased">
-    @livewire('detail-page', ['user'=> $user])
+    @livewire('detail-page' , ['user'=> $user])
     </body>
 @endsection

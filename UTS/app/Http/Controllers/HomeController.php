@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\product;
-use App\Models\User;
+use App\Models\Order;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Http;
@@ -17,6 +17,12 @@ class HomeController extends Controller {
         return view('page.detail',[
             'user' => $user
         ]);
+    }
+    
+    public function cart()
+    {
+        $keranjang = Order::all();
+        return view ('page.cart',['keranjang'=>$keranjang]);
     }
 
 

@@ -18,6 +18,7 @@ use App\Http\Livewire\DetailPage;
 Route::get('/', function () {
     return view('page.login');
 })->name('page.login');
+
 Route::get('/toa', function () {
     return view('toa');
 });
@@ -30,9 +31,13 @@ Route::get('/home', function () {
     return view('page.home');
 })->name('getAllData');
 
-Route::get('/cart', function () {
+/*Route::get('/cart', function () {
     return view('page.cart');
 })->name('cart');
+*/
+Route::get('/history', function () {
+    return view('page.history');
+})->name('history');
 
 
 
@@ -46,6 +51,8 @@ Route::get('/cart', function () {
 
 //Route::get("home", [HomeController::class, 'list'])->name("getAllData");
 Route::get("detail/{id}", [HomeController::class, 'detail'])->name("detail");
-Route::get("detailLaptop/{id}", [HomeController::class, 'detailLaptop'])->name("detailLaptop");
+
+Route::get("cart", [HomeController::class, 'cart'])->name("cart");
+
 
 

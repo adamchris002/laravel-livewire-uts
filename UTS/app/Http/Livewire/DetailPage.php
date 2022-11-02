@@ -4,6 +4,7 @@ namespace App\Http\Livewire;
 
 
 use App\Models\Order;
+use App\Models\history;
 use Illuminate\Support\Facades\Auth;
 use Livewire\Component;
 
@@ -39,6 +40,8 @@ class DetailPage extends Component
             'quantity' => $this->quantity,
 
         ]);
+
+        
 
         session()->flash('message','success added to cart');
 
