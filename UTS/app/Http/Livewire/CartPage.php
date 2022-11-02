@@ -15,8 +15,10 @@ class CartPage extends Component
         ]);
     }
 
-    public function delete($id){
+    public function delete($id)
+    {
         $order = Order::find($id);
         $order->delete();
+        
     }
 }

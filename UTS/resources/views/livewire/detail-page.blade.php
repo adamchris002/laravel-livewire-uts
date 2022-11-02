@@ -53,6 +53,8 @@
                         <p class="card-text">{{ $description }}</p>
                     </div>
                     <div class="add-cart">
+                        <input wire:model="quantity" type="number" class="form-control quantity update-cart" />
+                        <br />
                         <button type="submit" class="btn btn-primary">Add to Cart</button>
                     </div>
                 </div>

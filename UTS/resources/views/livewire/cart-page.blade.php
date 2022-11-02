@@ -1,4 +1,5 @@
 <div>
+<div>
     <nav class="navbar navbar-expand-lg bg-light">
         <div class="container-fluid">
             <a class="navbar-brand" href="{{ route('getAllData') }}">Home</a>
@@ -11,21 +12,24 @@
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li><a href="cart" class="navbar-brand">Cart</a></li>
                 </ul>
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-danger" type="submit">Logout</button>
+                    <button class="btn btn-warning">Checkout</button>
                 </form>
             </div>
         </div>
     </nav>
+</div>
 
+<div class="mt-5 container">
+    <h4 class="judul-cart">My Cart</h4>
+    
+    <br />
     <table id="cart" class="container table table-hover">
-    <thead>
+    <thead class="thead-dark">
         <tr>
-            <th style="width:90%">Product</th>
+            <th style="width:90%">Product(s)</th>
             <th style="width:10%">Price</th>
             <th style="width:8%">Quantity</th>
-            <th style="width:22%" class="text-center">Subtotal</th>
+            <th style="width:22%">Subtotal</th>
             <th style="width:10%"></th>
         </tr>
     </thead>
@@ -34,21 +38,21 @@
         <tr data-id="{{ $cart }}">
                     <td data-th="Product">
                         <div class="row">
-                            <div class="col-sm-3 hidden-xs"><img src="{{ $cart->thumbnail }}" width="100" height="100" class="img-responsive"/></div>
-                            <div class="col-sm-9">
-                                <h4 class="nomargin">{{ $cart->title }}</h4>
+                            <div class="col-sm-3"><img src="{{ $cart->thumbnail }}" width="180" height="100"/></div>
+                            <div class="col-sm-3">
+                                <h4>{{ $cart->title }}</h4>
                             </div>
                         </div>
                     </td>
                     <td data-th="Price">${{ number_format($cart->price) }}</td>
-                    <td data-th="Quantity">
-                        <input type="number" value="{{ $cart['quantity'] }}" class="form-control quantity update-cart" />
-                    </td>
-                    <td data-th="Subtotal" class="text-center">${{$cart->price * $cart['quantity']}}</td>
+                    <td data-th="Quantity">{{ $cart->quantity}}</td>
+                    <td data-th="Subtotal">${{$cart->price * $cart->quantity}}</td>
                     <td class="actions" data-th="">
-                        <button wire:click="delete({{$cart->id}})" class="btn btn-danger btn-sm remove-from-cart"><i class="fa fa-trash-o"></i></button>
+                    <button wire:click="delete({{$cart->id}})" class="btn btn-danger btn-sm remove-from-cart"><i class="fa fa-trash-o"></i></button>
                     </td>
                 </tr>
             @endforeach
     </tbody>
+</div>
+
 </div>

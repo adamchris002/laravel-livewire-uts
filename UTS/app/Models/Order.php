@@ -23,5 +23,6 @@ class Order extends Model
         'price',
         'thumbnail',
         'userid',
+        'quantity',
     ];
 }

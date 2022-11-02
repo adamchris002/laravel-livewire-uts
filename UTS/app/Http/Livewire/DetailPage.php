@@ -10,7 +10,7 @@ use Livewire\Component;
 
 class DetailPage extends Component
 {
-    public $title, $price, $thumbnail, $description, $stock, $rating;
+    public $title, $price, $thumbnail, $description, $stock, $rating, $quantity;
 
     public function mount($user)
     {
@@ -36,6 +36,7 @@ class DetailPage extends Component
             'price' => $this->price,
             'title' => $this->title,
             'thumbnail' => $this->thumbnail,
+            'quantity' => $this->quantity,
 
         ]);
 
