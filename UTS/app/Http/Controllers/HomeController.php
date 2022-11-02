@@ -13,12 +13,12 @@ class HomeController extends Controller {
 
 
     public function detail($id){
-        $user = product::where('id',$id)->first();
+        $product = product::where('id',$id)->first();
         return view('page.detail',[
-            'user' => $user
+            'product' => $product
         ]);
     }
-    
+
     public function cart()
     {
         $keranjang = Order::all();

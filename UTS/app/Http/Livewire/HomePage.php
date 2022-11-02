@@ -10,9 +10,6 @@ class HomePage extends Component
 
     public $search;
 
-    protected $updateQuerytring = ['search'];
-
-
     public function render()
     {
         if ($this->search){

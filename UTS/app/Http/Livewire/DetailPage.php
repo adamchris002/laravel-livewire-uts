@@ -13,14 +13,14 @@ class DetailPage extends Component
 {
     public $title, $price, $thumbnail, $description, $stock, $rating, $quantity;
 
-    public function mount($user)
+    public function mount($product)
     {
-        $this->title = $user->title;
-        $this->price = $user->price;
-        $this->thumbnail = $user->thumbnail;
-        $this->description = $user->description;
-        $this->stock = $user->stock;
-        $this->rating = $user->rating;
+        $this->title = $product->title;
+        $this->price = $product->price;
+        $this->thumbnail = $product->thumbnail;
+        $this->description = $product->description;
+        $this->stock = $product->stock;
+        $this->rating = $product->rating;
     }
 
     public function render()
@@ -41,7 +41,7 @@ class DetailPage extends Component
 
         ]);
 
-        
+
 
         session()->flash('message','success added to cart');
 
