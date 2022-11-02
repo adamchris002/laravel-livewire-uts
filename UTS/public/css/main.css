@@ -198,6 +198,7 @@ header {
     justify-content: center;
     align-items: center;
     margin-top: 25px;
+    margin-bottom: 25px;
 }
 
 .back-home {
@@ -239,4 +240,16 @@ header {
 .navigasi {
     padding-left: 10px;
     padding-right: 10px;
+}
+
+.add-to-cart-button {
+    margin-left: 10px;
+}
+
+.actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 150px;
+    height: 120px;
 }

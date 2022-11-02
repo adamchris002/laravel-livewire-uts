@@ -12,9 +12,9 @@
                     <li><a href="cart" class="navbar-brand">Cart</a></li>
                     <li><a href="history" class="navbar-brand">History</a></li>
                 </ul>
-                
+
                 <form class="d-flex" role="search" method="GET">
-                    <button class="btn btn-danger" type="button">Logout</button>
+                    <a class="btn btn-danger" href="{{route("page.login")}}">Logout</a>
                 </form>
             </div>
         </div>
@@ -22,7 +22,7 @@
 
     <div class="mt-5 container">
     <h4 class="judul-cart">History</h4>
-    
+
     <br />
     <table id="cart" class="container table table-hover">
     <thead class="thead-dark">

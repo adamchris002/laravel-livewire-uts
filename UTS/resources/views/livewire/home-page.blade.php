@@ -16,7 +16,7 @@
                     @csrf
                     <input wire:model="search" class="form-control me-2" type="search" name="search" placeholder="Search"
                            aria-label="Search">
-                    <button class="btn btn-danger" type="button">Logout</button>
+                    <a href="{{route("page.login")}}" class="btn btn-danger">Logout</a>
                 </form>
             </div>
         </div>

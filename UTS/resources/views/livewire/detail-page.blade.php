@@ -41,7 +41,7 @@
                     <div class="add-cart">
                         <input wire:model="quantity" id="number" type="number" class="form-control quantity update-cart" value="1" />
                         <br />
-                        <button type="submit" class="btn btn-primary">Add to Cart</button>
+                        <button type="submit" class="btn btn-primary add-to-cart-button">Add to Cart</button>
                     </div>
                 </div>
             </div>
