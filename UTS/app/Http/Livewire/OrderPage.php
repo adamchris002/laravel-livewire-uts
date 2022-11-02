@@ -30,6 +30,10 @@ class OrderPage extends Component
             'subtotal' => $this->quantity * $this->price,
 
         ]);
+        $order = Order::all();
+        return view('livewire.order-page',[
+            'order' => $order
+        ]);
         session()->flash('message','success checked out');
    
     }

@@ -3,6 +3,7 @@
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Livewire\DetailPage;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,9 +16,13 @@ use App\Http\Livewire\DetailPage;
 |
 */
 
+
 Route::get('/', function () {
     return view('page.login');
 })->name('page.login');
+
+
+
 
 Route::get('/toa', function () {
     return view('toa');
@@ -27,14 +32,12 @@ Route::get('/register', function () {
     return view('page.register');
 })->name('register');
 
+
 Route::get('/home', function () {
     return view('page.home');
 })->name('getAllData');
 
-/*Route::get('/cart', function () {
-    return view('page.cart');
-})->name('cart');
-*/
+
 Route::get('/history', function () {
     return view('page.history');
 })->name('history');
