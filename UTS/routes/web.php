@@ -30,6 +30,10 @@ Route::get('/home', function () {
     return view('page.home');
 })->name('getAllData');
 
+Route::get('/cart', function () {
+    return view('page.cart');
+})->name('cart');
+
 
 
 
