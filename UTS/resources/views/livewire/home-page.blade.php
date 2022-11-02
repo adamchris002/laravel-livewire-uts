@@ -11,6 +11,9 @@
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li><a href="cart" class="navbar-brand">Cart</a></li>
                 </ul>
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li><a href="history" class="navbar-brand">History</a></li>
+                </ul>
                 <form class="d-flex" role="search" method="GET">
                     @csrf
                     <input wire:model="search" class="form-control me-2" type="search" name="search" placeholder="Search"

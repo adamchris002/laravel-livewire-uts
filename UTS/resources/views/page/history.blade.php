@@ -10,6 +10,6 @@
 
 @section('content')
     <body class="antialiased">
-    @livewire('cart-page', ['cart'=>$cart])
+    @livewire('history-page', ['order'=> $order])
     </body>
 @endsection

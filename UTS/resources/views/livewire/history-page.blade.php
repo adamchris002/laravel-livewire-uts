@@ -1,9 +1,7 @@
 <div>
-
-<div>
     <nav class="navbar navbar-expand-lg bg-light">
         <div class="container-fluid">
-            <a class="navbar-brand" href="{{ route('getAllData') }}">Home</a>
+            <a class="navbar-brand" href="home">Home</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                     aria-label="Toggle navigation">
@@ -13,14 +11,17 @@
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li><a href="cart" class="navbar-brand">Cart</a></li>
                 </ul>
-                
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li><a href="history" class="navbar-brand">History</a></li>
+                </ul>
+                <form class="d-flex" role="search" method="GET">
+                    <button class="btn btn-danger" type="button">Logout</button>
+                </form>
             </div>
         </div>
     </nav>
-</div>
 
-
-<div class="mt-5 container">
+    <div class="mt-5 container">
     <h4 class="judul-cart">My Cart</h4>
     
     <br />
@@ -34,33 +35,23 @@
             <th style="width:10%"></th>
         </tr>
     </thead>
-    
     <tbody>
-        @foreach ($order as $cart)
+        @foreach ($history as $cart)
         <tr data-id="{{ $cart }}">
                     <td data-th="Product">
                         <div class="row">
-                            <div class="col-sm-3" wire:model="thumbnail"><img src="{{ $cart->thumbnail }}" width="180" height="100"/></div>
+                            <div class="col-sm-3"><img src="{{ $cart->thumbnail }}" width="180" height="100"/></div>
                             <div class="col-sm-3">
-                                <input class="history-element" value="{{$cart->title}}" disabled>
+                                <h4>{{ $cart->title }}</h4>
                             </div>
                         </div>
                     </td>
-                    <!-- <td data-th="Price" wire:model="price">${{ number_format($cart->price) }}</td>   -->
-                    <td><input class="history-element" value="${{$cart->price}}" disabled></td>
-                    <!-- <td data-th="Quantity" wire:model="quantity">{{ $cart->quantity}}</td> -->
-                    <td><input class="history-element" value="{{($cart->quantity)}}" disabled></td>
-                    <!-- <td data-th="Subtotal" wire:model="subtotal">${{$cart->price * $cart->quantity}}</td> -->
-                    <td><input class="history-element" value="{{$cart->price * $cart->quantity}}" disabled></td>
-                    <td class="actions" data-th="">
-                    <button wire:click="delete({{$cart->id}})" class="btn btn-danger btn-sm remove-from-cart"><i class="fa fa-trash-o"></i></button>
-                    <button class="btn btn-warning" wire:click="CheckOut({{$cart}})">Checkout</button>
-                    </td>
+                    <td data-th="Price">${{ number_format($cart->price) }}</td>
+                    <td data-th="Quantity">{{ $cart->quantity}}</td>
+                    <td data-th="Subtotal">${{$cart->price * $cart->quantity}}</td>
                 </tr>
             @endforeach
     </tbody>
-    
 </div>
-
 
 </div>
